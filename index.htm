@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quiz Game</title>
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/animate.min.css" />
+    <!-- font awesome -->
+    <script src="/js/all.js"></script>
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="/css/quiz.css" />
+  </head>
+  <body>
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-10 col-md-8 height-80vh mx-auto p-2 my-3 rounded text-center text-white"
+            id="quiz"
+          >
+            <h1
+              class="animated bounce text-uppercase bg-primary p-3 font-weight-bold"
+            >
+              Quiz Game
+            </h1>
+            <p></p>
+            <button
+              id="start-btn"
+              class="btn btn-primary py-2 px-5 btn-lg my-5"
+            >
+              Start
+            </button>
+            <div id="ui-div" class="d-none">
+              <div class="my-3">
+                <span
+                  id="time"
+                  class="col-3 d-none p-2 rounded text-center mr-5"
+                >
+                  01:00
+                </span>
+                <span id="progress">Question x of y</span>
+              </div>
+              <h5 id="question"></h5>
+              <p id="choice0" class="my-3"></p>
+              <button class="btn btn-primary" id="guess0">
+                Select Answer (A)
+              </button>
+              <p id="choice1" class="my-3"></p>
+              <button class="btn btn-primary" id="guess1">
+                Select Answer (B)
+              </button>
+              <div>
+                <button class="btn btn-warning px-5 my-3 py-2">
+                  <a href="/index.htm" style="text-decoration: none;"
+                    >Restart</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center text-white">
+            <p>
+              &copy 2020 | Developed by
+              <a
+                href="https://www.twitter.com/am_phenom"
+                style="text-decoration: none;"
+                >Ali A. T.</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- jQuery -->
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/quiz.js"></script>
+    <script src="/js/question.js"></script>
+    <script src="/js/quizUI.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
