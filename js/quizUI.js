@@ -2,6 +2,7 @@
 $(function () {
   $("#start-btn").click(function () {
     $("#start-btn").addClass("d-none");
+    $("#start-text").addClass("d-none");
     $("#ui-div").removeClass("d-none");
     $("#time").removeClass("d-none");
     $("#time").addClass("bg-warning");
@@ -66,13 +67,15 @@ var QuizUI = {
     }
   },
   displayScore: function () {
-    var gameOverHTML = '<h1 class="bg-primary">Game Over</h1>';
-    gameOverHTML +=
-      "<h2> You Score " +
-      quiz.score +
-      " out of " +
-      quiz.questions.length +
-      " questions</h2>";
+    var gameOverHTML = `<h1 class="bg-primary">Game Over</h1>
+      <h2> You Score ${quiz.score} out of ${quiz.questions.length} questions</h2>
+      <div>
+        <button class="btn btn-warning px-5 my-3 py-2">
+          <a href="/index.htm" style="text-decoration: none;"
+            >Restart</a
+          >
+        </button>
+      </div>`;
     this.populateIdWithHTML("quiz", gameOverHTML);
   },
   populateIdWithHTML: function (id, text) {
